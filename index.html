@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发票抬头</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="top_t">单位发票抬头</div>
+    <ul>
+      <li>
+        <span class="item-title">单位地址</span>
+        <span class="item-content">江西省南昌市红谷滩新区庐山南大道保利高尔夫花园荷兰苑1栋1单元502室</span>
+      </li>
+      <li>
+        <span class="item-title">主要经营</span>
+        <span class="item-content">建筑工程、城市亮化工程、市政工程施工、室内装修工程、园林绿化工程、地基与基础工程、土木工程施工、桥梁工程、水利工程、公路工程、钢结构工程、城市道路照明工程、国内贸易、各类广告设计及发布制作代理（依法须经批准的项目吗，经相关部门批准后方可开展经营活动）</span>
+      </li>
+      <li>
+        <span class="item-title">税号</span>
+        <span class="item-content">91360125MA37PXTF2H</span>
+      </li>
+      <li>
+        <span class="item-title">电话号码</span>
+        <span class="item-content">15070878888</span>
+      </li>
+      <li>
+        <span class="item-title">开户银行</span>
+        <span class="item-content">华夏银行股份有限公司</span>
+      </li>
+      <li>
+        <span class="item-title">银行账户</span>
+        <span class="item-content">1515 3000 0001 4418 6</span>
+      </li>
+    </ul>
+    <div>
+      <div id="qrcode"></div>
+      <p class="title">开票时候出示</span>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="js/index.js"></script>
+<script>
+  var url = location.href;
+  var qrcode = new QRCode("qrcode", {
+    text: url,
+    width: 150,
+    height: 150,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+
+</html>
